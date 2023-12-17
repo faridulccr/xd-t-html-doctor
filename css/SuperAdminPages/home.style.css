@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 412px 1fr;
     background-color: #f8f7fc;
-    min-height: 100vh;
+    min-height: calc(100vh - 90px);
 }
 
 .dashboard-home-container .home-content .row-2 {
@@ -53,6 +53,7 @@
 
 .dashboard-home-container .home-content .row-2 .pulse table tbody tr td {
     padding-left: 0;
+    padding: 10px 10px 10px 0;
 }
 
 .dashboard-home-container .home-content .row-2 .pulse table thead tr {
@@ -82,22 +83,12 @@
     font-size: 13px;
 }
 
-.dashboard-home-container
-    .home-content
-    .row-2
-    .geo-analytics
-    .analytics-btn
-    button {
+.dashboard-home-container .home-content .row-2 .geo-analytics .analytics-btn button {
     transition: 0.3s;
     position: relative;
 }
 
-.dashboard-home-container
-    .home-content
-    .row-2
-    .geo-analytics
-    .analytics-btn
-    button::after {
+.dashboard-home-container .home-content .row-2 .geo-analytics .analytics-btn button::after {
     transition: 0.3s;
     content: "";
     display: none;
@@ -110,30 +101,15 @@
     left: 0;
 }
 
-.dashboard-home-container
-    .home-content
-    .row-2
-    .geo-analytics
-    .analytics-btn
-    button:hover {
+.dashboard-home-container .home-content .row-2 .geo-analytics .analytics-btn button:hover {
     color: #2a659a;
 }
 
-.dashboard-home-container
-    .home-content
-    .row-2
-    .geo-analytics
-    .analytics-btn
-    button.active {
+.dashboard-home-container .home-content .row-2 .geo-analytics .analytics-btn button.active {
     color: #2a659a;
 }
 
-.dashboard-home-container
-    .home-content
-    .row-2
-    .geo-analytics
-    .analytics-btn
-    button.active::after {
+.dashboard-home-container .home-content .row-2 .geo-analytics .analytics-btn button.active::after {
     display: block;
 }
 
@@ -143,24 +119,13 @@
     gap: 12px;
 }
 
-.dashboard-home-container
-    .home-content
-    .row-2
-    .geo-analytics
-    .select-group
-    div {
+.dashboard-home-container .home-content .row-2 .geo-analytics .select-group div {
     background-color: #eef1f4;
     border-radius: 25px;
     padding: 13px 20px;
 }
 
-.dashboard-home-container
-    .home-content
-    .row-2
-    .geo-analytics
-    .select-group
-    div
-    select {
+.dashboard-home-container .home-content .row-2 .geo-analytics .select-group div select {
     background-color: #eef1f4;
     font-size: 20px;
     line-height: 24px;
@@ -176,12 +141,7 @@
     margin: 0 auto;
 }
 
-.dashboard-home-container
-    .home-content
-    .row-2
-    .geo-analytics
-    .map-wrap
-    .leaflet-container {
+.dashboard-home-container .home-content .row-2 .geo-analytics .map-wrap .leaflet-container {
     border-radius: 20px;
     width: 98%;
     height: 98%;
@@ -194,14 +154,7 @@
     animation-fill-mode: forwards;
 }
 
-.dashboard-home-container
-    .home-content
-    .row-2
-    .geo-analytics
-    .map-wrap
-    .leaflet-container
-    .leaflet-control-attribution
-    > a {
+.dashboard-home-container .home-content .row-2 .geo-analytics .map-wrap .leaflet-container .leaflet-control-attribution>a {
     display: none;
 }
 
@@ -235,20 +188,11 @@
     }
 }
 
-.dashboard-home-container
-    .home-content
-    .graph-section
-    .total-payment
-    .recharts-layer
-    .recharts-cartesian-axis-line {
+.dashboard-home-container .home-content .graph-section .total-payment .recharts-layer .recharts-cartesian-axis-line {
     display: none;
 }
 
-.dashboard-home-container
-    .home-content
-    .graph-section
-    .total-payment
-    line.recharts-cartesian-axis-tick-line {
+.dashboard-home-container .home-content .graph-section .total-payment line.recharts-cartesian-axis-tick-line {
     display: none;
 }
 
@@ -276,11 +220,7 @@
     color: #666;
 }
 
-.dashboard-home-container
-    .home-content
-    .graph-section
-    .graph-container
-    .jun::before {
+.dashboard-home-container .home-content .graph-section .graph-container .jun::before {
     content: "-";
     display: block;
     position: absolute;

@@ -127,7 +127,24 @@
             </div>
         </nav>
 
-        <section class="home dashboard-home-container super-admin">
+        <header class="profile-header font-['Roboto']">
+            <p class="title">Home</p>
+            <div class="flex items-center gap-5">
+                <img
+                    class="w-[50px] h-[50px] rounded-full"
+                    src="../media/woman.avif"
+                    alt=""
+                />
+                <div>
+                    <p class="text-[20px] text-[#A4A4A4]">
+                        T. Hill
+                    </p>
+                    <p class="text-[16px] leading-[21px]">Secretary</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="main-content dashboard-home-container super-admin">
             <div class="profile-details p-8">
                 <div class="text-center mb-[90px]">
                     <img
@@ -272,7 +289,7 @@
                                 </button>
                             </p>
 
-                            <div class="table overflow-x-auto mt-10">
+                            <div class="mt-10">
                                 <table
                                     class="text-[16px] leading-[20px] text-[#2F3241]"
                                 >
@@ -345,6 +362,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="geo-analytics">
                         <div
                             class="bg-[#D8E5F0] rounded-tl-[15px] rounded-tr-[15px] px-5 py-3 flex justify-between items-center"
@@ -423,7 +441,7 @@
                             Financial Health
                         </h3>
                         <button
-                            class="btn bg-[#2A659A] w-[120px] h-10 text-[#fff] text-[16px] leading-[19px] hover:bg-[#103b61] border-0"
+                            class="btn bg-[#2A659A] w-[120px] h-10 text-[#fff] text-[16px] leading-[19px] hover:bg-[#103b61] border-0 rounded-[6px]"
                         >
                             This Month
                         </button>
@@ -465,5 +483,17 @@
         </section>
 
         <script src="../js/MenuScript.js"></script>
+        <script>
+            const handleMenu = (class_name, id) => {
+                const messageMenu = document.querySelectorAll(`.${class_name}`);
+                messageMenu.forEach((element) => {
+                    if (id === element.id) {
+                        element.classList.add("active");
+                    } else {
+                        element.classList.remove("active");
+                    }
+                });
+            };
+        </script>
     </body>
 </html>
