@@ -23,6 +23,7 @@
         <!----======== CSS ======== -->
         <link rel="stylesheet" href="../css/style.css" />
         <link rel="stylesheet" href="../css/MenuStyle.css" />
+        <link rel="stylesheet" href="../css/ClinicianPages/home.style.css" />
 
         <title>home</title>
     </head>
@@ -143,8 +144,598 @@
             </div>
         </header>
 
-        <section class="main-content"></section>
+        <section class="main-content clinic-manager-home">
+            <div class="profile-details p-8">
+                <div class="text-center mb-[90px]">
+                    <img
+                        class="w-[122px] h-[122px] rounded-full inline-block mb-7"
+                        src="../media/woman.avif"
+                        alt="user"
+                    />
+                    <h3
+                        class="text-[32px] text-[#2F3241] leading-[38px] font-[600]"
+                    >
+                        Olivia Wild
+                    </h3>
+                    <p class="text-[20px] text-[#626264] leading-[24px]">
+                        Female
+                    </p>
+                </div>
+
+                <div class="general-info">
+                    <h3
+                        class="text-[24px] leading-[29px] font-[600] text-[#000009] mb-6"
+                    >
+                        General Info
+                    </h3>
+                    <table>
+                        <tbody
+                            class="text-[18px] leading-[22px] text-[#626264]"
+                        >
+                            <tr>
+                                <td>Phone</td>
+                                <td class="text-[#2A659A]">520-909-0865</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td class="text-[#2A659A]">
+                                    name.name@gmail.com
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Location</td>
+                                <td class="text-[#2A659A]">Scottsdale AZ</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    Date of Birth
+                                    <span class="text-[#2A659A]">
+                                        &nbsp; 00/00/0000
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-[17px]" colspan="2">
+                                    Medical Record Number
+                                    <span class="text-[#2A659A]">
+                                        &nbsp;247992029AB
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="active-employees mt-[18px]">
+                    <h3
+                        class="text-[24px] leading-[29px] font-[600] text-[#000009] mb-6"
+                    >
+                        Referrals
+                    </h3>
+                    <ul class="text-[18px] leading-[22px] text-[#626264]">
+                        <li>OCTOBER 2023 - SPOOKY15</li>
+                        <li>FIRST VISIT - WELCOME10</li>
+                        <li>Results 3</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="home-content pl-4 pt-5">
+                <div class="flex justify-between items-center">
+                    <!--  menu  -->
+                    <ul
+                        class="flex items-center justify-center gap-10 font-['DM_Sans'] text-[#5F5F5F] text-xl"
+                    >
+                        <li
+                            class="btn-menu active"
+                            onclick="handleMenu('btn-menu', 'overview')"
+                            id="overview"
+                        >
+                            Overview
+                        </li>
+                        <li
+                            class="btn-menu"
+                            onclick="handleMenu('btn-menu', 'soaps')"
+                            id="soaps"
+                        >
+                            SOAPs
+                        </li>
+                        <li
+                            class="btn-menu"
+                            onclick="handleMenu('btn-menu', 'labs')"
+                            id="labs"
+                        >
+                            Labs
+                        </li>
+                        <li
+                            class="btn-menu"
+                            onclick="handleMenu('btn-menu', 'documents')"
+                            id="documents"
+                        >
+                            Documents
+                        </li>
+                    </ul>
+
+                    <div
+                        class="mb-[14px] w-fit ml-auto flex items-center gap-4 pr-7"
+                    >
+                        <img
+                            class="w-[50px] h-[50px] rounded-[9px]"
+                            src="../media/woman.avif"
+                            alt="user"
+                        />
+                        <div>
+                            <h3 class="text-[18px] leading-[22px] text-[#000]">
+                                Dr. Ashley
+                            </h3>
+                            <p
+                                class="text-[14px] leading-[17px] text-[#A4A4A4]"
+                            >
+                                Super Admin
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+                <div class="row-2 mt-5 mr-4">
+                    <!-- ToDo section start -->
+                    <div>
+                        <div
+                            class="bg-[#D8E5F0] rounded-tl-[15px] rounded-tr-[15px] px-5 py-3"
+                        >
+                            <h3
+                                class="text-[28px] leading-[34px] text-[#2F3241]"
+                            >
+                                To Do
+                            </h3>
+                        </div>
+                        <div
+                            class="bg-white p-5 rounded-bl-[15px] rounded-br-[15px]"
+                        >
+                            <div
+                                class="text-xl leading-6 font-['DM_Sans'] text-[#2F3241] bg-[#E9ECFD] rounded-[15px] p-4 pr-6"
+                            >
+                                <p class="flex items-center gap-4 text-[20px]">
+                                    Oct 25th 12:15pm
+                                    <i class="fa-solid fa-video"></i>
+                                </p>
+                                <p class="text-[16px]">
+                                    Follow up visit with Carrie S. VIRTUAL Dr.
+                                    Anne Richardson
+                                </p>
+                                <a
+                                    class="underline inline-block mt-3 text-[17px]"
+                                    href="#"
+                                >
+                                    See Record
+                                </a>
+                                <p
+                                    class="flex items-center justify-between text-[16px]"
+                                >
+                                    Starts at 12:00 PM CST
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </p>
+                            </div>
+
+                            <div
+                                class="text-xl leading-6 font-['DM_Sans'] text-[#2F3241] bg-[#E9ECFD] rounded-[15px] p-4 pr-6 mt-5"
+                            >
+                                <p>Oct 25th 12:15pm</p>
+                                <p class="text-[16px]">
+                                    Follow up visit with Carrie S. VIRTUAL Dr.
+                                    Anne Richardson
+                                </p>
+                                <a
+                                    class="underline inline-block mt-3 text-[17px]"
+                                    href="#"
+                                >
+                                    See Record
+                                </a>
+                                <p class="text-[16px]">
+                                    Starts at 12:00 PM CST
+                                </p>
+                                <div class="mt-5 text-base">
+                                    <button
+                                        class="h-10 bg-[#2A9A57] rounded-lg px-4 text-white"
+                                    >
+                                        Approve
+                                    </button>
+                                    <button
+                                        class="h-10 bg-[#D2474A] rounded-lg px-4 text-white ml-2"
+                                    >
+                                        Decline
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pulse section start -->
+                    <div class="pulse">
+                        <div
+                            class="bg-[#D8E5F0] rounded-tl-[15px] rounded-tr-[15px] px-5 py-3"
+                        >
+                            <h3
+                                class="text-[28px] leading-[34px] text-[#2F3241]"
+                            >
+                                Pulse
+                            </h3>
+                        </div>
+                        <div
+                            class="content bg-white p-5 rounded-bl-[15px] rounded-br-[15px] flex items-start"
+                        >
+                            <div class="col-1 pr-5 w-[200px]">
+                                <h3>SOAP Note Eval</h3>
+                                <ul>
+                                    <li>Opened <span>7</span></li>
+                                    <li>Completed <span>2</span></li>
+                                </ul>
+                                <h3>Labs</h3>
+                                <ul>
+                                    <li>MisMatched <span>2</span></li>
+                                    <li>MisMatched <span>2</span></li>
+                                    <li>Completed <span>7</span></li>
+                                </ul>
+                            </div>
+
+                            <div
+                                class="col-2 font-['DM_Sans'] text-[#2F3241] px-5"
+                            >
+                                <h4
+                                    class="text-[15px] font-semibold flex items-center justify-between mb-2"
+                                >
+                                    Body info
+                                    <button>
+                                        <i
+                                            class="fa-solid fa-ellipsis-vertical text-[24px]"
+                                        ></i>
+                                    </button>
+                                </h4>
+
+                                <div class="menu-container">
+                                    <ul>
+                                        <li
+                                            class="pulse-menu active"
+                                            onclick="handleMenu('pulse-menu', 'pulmonology')"
+                                            id="pulmonology"
+                                        >
+                                            Pulmonology
+                                        </li>
+                                        <li
+                                            class="pulse-menu"
+                                            onclick="handleMenu('pulse-menu', 'skeletal')"
+                                            id="skeletal"
+                                        >
+                                            Skeletal system
+                                        </li>
+                                        <li
+                                            class="pulse-menu"
+                                            onclick="handleMenu('pulse-menu', 'muscle')"
+                                            id="muscle"
+                                        >
+                                            Muscle system
+                                        </li>
+                                        <li
+                                            class="pulse-menu"
+                                            onclick="handleMenu('pulse-menu', 'nervous')"
+                                            id="nervous"
+                                        >
+                                            Nervous
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="human-body-container">
+                                    <img src="../media/Body_Icon.svg" alt="" />
+                                    <div class="circle"></div>
+                                    <div class="line"></div>
+                                    <div class="big-dot">
+                                        <div class="inner-dot"></div>
+                                    </div>
+                                    <div class="small-dot"></div>
+                                    <div class="arrow">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                        <i
+                                            class="fa-solid fa-chevron-right"
+                                        ></i>
+                                    </div>
+
+                                    <div
+                                        class="human-body-content leading-[1px]"
+                                    >
+                                        <p class="text-sm font-semibold">
+                                            Oxygen level
+                                        </p>
+                                        <span class="text-sm text-[grey]"
+                                            >+1.2%</span
+                                        >
+                                        <span
+                                            class="text-sm text-[grey] block mt-2"
+                                        >
+                                            SpO2
+                                        </span>
+                                        <div class="flex">
+                                            <span class="font-bold text-xl"
+                                                >98%</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="col-3 text-[15px] leading-[18px] text-[#2F3241] font-['DM_Sans']"
+                            >
+                                <select
+                                    class="border border-[#C9C9C9] rounded-[6px] px-4 py-2 outline-0 font-semibold"
+                                >
+                                    <option value="#">This Month</option>
+                                    <option value="#">Last Month</option>
+                                    <option value="#">Next Month</option>
+                                    <option value="#">June</option>
+                                </select>
+
+                                <ul class="body-menu mt-16 leading-8">
+                                    <li
+                                        class="side-menu"
+                                        onclick="handleMenu('side-menu', 'visit')"
+                                        id="visit"
+                                    >
+                                        Visit history
+                                    </li>
+                                    <li
+                                        class="side-menu"
+                                        onclick="handleMenu('side-menu', 'diagnose')"
+                                        id="diagnose"
+                                    >
+                                        Diagnoses
+                                    </li>
+                                    <li
+                                        class="side-menu"
+                                        onclick="handleMenu('side-menu', 'scans')"
+                                        id="scans"
+                                    >
+                                        Scans
+                                    </li>
+                                    <li
+                                        class="side-menu active"
+                                        onclick="handleMenu('side-menu', 'alarming')"
+                                        id="alarming"
+                                    >
+                                        Alarming areas
+                                    </li>
+                                    <li
+                                        class="side-menu"
+                                        onclick="handleMenu('side-menu', 'stable')"
+                                        id="stable"
+                                    >
+                                        Stable areas
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-3 mt-5 mr-4">
+                    <!-- FinancialHealth section -->
+                    <div
+                        class="bg-[#D8E5F0] rounded-tl-[15px] rounded-tr-[15px] px-5 py-3 flex justify-between items-center"
+                    >
+                        <h3 class="text-[28px] leading-[34px] text-[#2F3241]">
+                            Financial Health
+                        </h3>
+                        <button
+                            class="btn bg-[#2A659A] w-fit h-10 text-[#fff] text-[16px] leading-[19px] hover:bg-[#103b61] rounded-[6px] px-4"
+                        >
+                            Manage Refils
+                        </button>
+                    </div>
+                    <div
+                        class="table-container bg-white rounded-bl-[15px] rounded-br-[15px] p-5 text-[#2F3241] font-['DM_Sans']"
+                    >
+                        <p class="text-[32px]">Patients</p>
+
+                        <table class="text-lg leading-9 overflow-auto w-full">
+                            <thead>
+                                <tr>
+                                    <td>
+                                        <p class="flex items-center gap-4">
+                                            Last Name
+                                            <span>
+                                                <i
+                                                    class="fa-solid fa-angle-up"
+                                                ></i>
+                                                <i
+                                                    class="fa-solid fa-angle-down"
+                                                ></i>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p class="flex items-center gap-4">
+                                            Prescription Name
+                                            <span>
+                                                <i
+                                                    class="fa-solid fa-angle-up"
+                                                ></i>
+                                                <i
+                                                    class="fa-solid fa-angle-down"
+                                                ></i>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p class="flex items-center gap-4">
+                                            Amount of Refills Left
+                                            <span>
+                                                <i
+                                                    class="fa-solid fa-angle-up"
+                                                ></i>
+                                                <i
+                                                    class="fa-solid fa-angle-down"
+                                                ></i>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p class="flex items-center gap-4">
+                                            Request Made
+                                            <span>
+                                                <i
+                                                    class="fa-solid fa-angle-up"
+                                                ></i>
+                                                <i
+                                                    class="fa-solid fa-angle-down"
+                                                ></i>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td>To Do</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bhaktapur</td>
+                                    <td>Amoxicillin</td>
+                                    <td>5</td>
+                                    <td>15</td>
+                                    <td>
+                                        <div
+                                            class="btn-group my-3 text-base flex items-center"
+                                        >
+                                            <button
+                                                class="h-10 bg-[#2A9A57] rounded-lg px-4 text-white"
+                                            >
+                                                Approve
+                                            </button>
+                                            <button
+                                                class="h-10 bg-[#D2474A] rounded-lg px-4 text-white ml-2"
+                                            >
+                                                Decline
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bhaktapur</td>
+                                    <td>Amoxicillin</td>
+                                    <td>5</td>
+                                    <td>15</td>
+                                    <td>
+                                        <div class="btn-group my-3 text-base">
+                                            <button
+                                                class="h-10 bg-[#2A9A57] rounded-lg px-4 text-white"
+                                            >
+                                                Approve
+                                            </button>
+                                            <button
+                                                class="h-10 bg-[#D2474A] rounded-lg px-4 text-white ml-2"
+                                            >
+                                                Decline
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bhaktapur</td>
+                                    <td>Amoxicillin</td>
+                                    <td>5</td>
+                                    <td>15</td>
+                                    <td>
+                                        <div class="btn-group my-3 text-base">
+                                            <button
+                                                class="h-10 bg-[#2A9A57] rounded-lg px-4 text-white"
+                                            >
+                                                Approve
+                                            </button>
+                                            <button
+                                                class="h-10 bg-[#D2474A] rounded-lg px-4 text-white ml-2"
+                                            >
+                                                Decline
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bhaktapur</td>
+                                    <td>Amoxicillin</td>
+                                    <td>5</td>
+                                    <td>15</td>
+                                    <td>
+                                        <div class="btn-group my-3 text-base">
+                                            <button
+                                                class="h-10 bg-[#2A9A57] rounded-lg px-4 text-white"
+                                            >
+                                                Approve
+                                            </button>
+                                            <button
+                                                class="h-10 bg-[#D2474A] rounded-lg px-4 text-white ml-2"
+                                            >
+                                                Decline
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bhaktapur</td>
+                                    <td>Amoxicillin</td>
+                                    <td>5</td>
+                                    <td>15</td>
+                                    <td>
+                                        <div class="btn-group my-3 text-base">
+                                            <button
+                                                class="h-10 bg-[#2A9A57] rounded-lg px-4 text-white"
+                                            >
+                                                Approve
+                                            </button>
+                                            <button
+                                                class="h-10 bg-[#D2474A] rounded-lg px-4 text-white ml-2"
+                                            >
+                                                Decline
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bhaktapur</td>
+                                    <td>Amoxicillin</td>
+                                    <td>5</td>
+                                    <td>15</td>
+                                    <td>
+                                        <div class="btn-group my-3 text-base">
+                                            <button
+                                                class="h-10 bg-[#2A9A57] rounded-lg px-4 text-white"
+                                            >
+                                                Approve
+                                            </button>
+                                            <button
+                                                class="h-10 bg-[#D2474A] rounded-lg px-4 text-white ml-2"
+                                            >
+                                                Decline
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <script src="../js/MenuScript.js"></script>
+        <script>
+            const handleMenu = (class_name, id) => {
+                const mtn_menu = document.querySelectorAll(`.${class_name}`);
+                mtn_menu.forEach((element) => {
+                    if (id === element.id) {
+                        element.classList.add("active");
+                    } else {
+                        element.classList.remove("active");
+                    }
+                });
+            };
+        </script>
     </body>
 </html>
