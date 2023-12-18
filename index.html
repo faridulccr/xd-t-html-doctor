@@ -2,16 +2,369 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!----===== Boxicons CSS ===== -->
         <link
-            href="https://cdn.jsdelivr.net/npm/daisyui@4.4.20/dist/full.min.css"
+            href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
             rel="stylesheet"
-            type="text/css"
         />
+
+        <!-- font awesome -->
+        <script
+            src="https://kit.fontawesome.com/f78c19fc0c.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Tailwind CSS -->
         <script src="https://cdn.tailwindcss.com"></script>
+
+        <!----======== CSS ======== -->
         <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/MenuStyle.css" />
+        <link rel="stylesheet" href="./css/home.css" />
+
+        <title>Home</title>
     </head>
     <body>
-        <h1 class="text-3xl font-bold underline">Hello world!</h1>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="../media/logo.png" alt="" />
+                        <!----===== make the icon slightly larger ===== -->
+                    </span>
+
+                    <div class="text logo-text">
+                        <span class="name">Aspire</span>
+                        <span class="profession">EMR</span>
+                    </div>
+                </div>
+
+                <i class="bx bx-chevron-right toggle"></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <li class="search-box">
+                        <i class="bx bx-search icon"></i>
+                        <input type="text" placeholder="Search..." />
+                    </li>
+
+                    <!----===== Issue when you remove the serch bar the dark/lgiht mode toggel doens't work... ===== -->
+
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="./index.html">
+                                <i class="bx bx-home-alt icon"></i>
+                                <!----===== chnage to <i class='bx bxs-dashboard' ></i> ===== -->
+                                <span class="text nav-text">Home</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="./SuperAdminPages/patients.html">
+                                <i class="bx bx-bar-chart-alt-2 icon"></i>
+                                <!----===== chnage the to <i class='bx bxs-user-account' ></i> ===== -->
+                                <span class="text nav-text">Patients</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="./SuperAdminPages/calendar.html">
+                                <i class="bx bx-bell icon"></i>
+                                <!----===== chnage the to <i class='bx bxs-calendar' ></i>===== -->
+                                <span class="text nav-text">Calendar</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="./SuperAdminPages/messaging.html">
+                                <i class="bx bx-pie-chart-alt icon"></i>
+                                <!----===== chnage the to <i class='bx bxs-message-alt-detail' ></i>===== -->
+                                <span class="text nav-text">Messageing</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="./SuperAdminPages/billing.html">
+                                <i class="bx bx-heart icon"></i>
+                                <!----===== chnage the to <i class='bx bxs-wallet-alt' ></i>===== -->
+                                <span class="text nav-text">Billing</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="./SuperAdminPages/financials.html">
+                                <i class="bx bx-wallet icon"></i>
+                                <!----===== chnage the to <i class='bx bx-line-chart'></i>===== -->
+                                <span class="text nav-text">Financials</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="./auth/">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class="bx bx-moon icon moon"></i>
+                            <i class="bx bx-sun icon sun"></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <header class="profile-header font-['Roboto']">
+            <p class="title">Home</p>
+            <div class="flex items-center gap-5">
+                <img
+                    class="w-[50px] h-[50px] rounded-full"
+                    src="./media/woman.avif"
+                    alt=""
+                />
+                <div>
+                    <p class="text-[20px] text-[#A4A4A4]">T. Hill</p>
+                    <p class="text-[16px] leading-[21px]">Secretary</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- home content -->
+        <section class="main-content super-admin-home py-6 px-4">
+            <div class="w-[425px]">
+                <!-- profile -->
+                <div
+                    class="flex items-center justify-center gap-6 mt-10 font-['DM_Sans']"
+                >
+                    <img
+                        class="w-[89px] h-[94px] rounded-full"
+                        src="./media/woman.avif"
+                        alt=""
+                    />
+                    <div>
+                        <h3
+                            class="font-semibold text-[31px] leading-3[37px] text-[#000009]"
+                        >
+                            Olivia Wild
+                        </h3>
+                        <a
+                            class="font-semibold text-lg text-[#215EBF]"
+                            href="#"
+                        >
+                            Ahl-ih-veeuh WA-ihld
+                        </a>
+                        <p
+                            class="text-[#626264] text-base flex items-start gap-3"
+                        >
+                            Female
+                            <span class="text-[13px]">
+                                <i class="fa-solid fa-circle"></i>
+                            </span>
+                            81 y.o.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- menu -->
+                <ul
+                    class="my-7 flex items-center justify-center gap-10 font-['DM_Sans'] text-[#5F5F5F] text-xl border-b"
+                >
+                    <li
+                        class="message-menu"
+                        onclick="handleMessageMenu('record')"
+                        id="record"
+                    >
+                        Record
+                    </li>
+                    <li
+                        class="message-menu active"
+                        onclick="handleMessageMenu('chat')"
+                        id="chat"
+                    >
+                        Chat
+                    </li>
+                    <li
+                        class="message-menu"
+                        onclick="handleMessageMenu('notes')"
+                        id="notes"
+                    >
+                        Notes
+                    </li>
+                    <li
+                        class="message-menu"
+                        onclick="handleMessageMenu('docs')"
+                        id="docs"
+                    >
+                        Docs
+                    </li>
+                </ul>
+
+                <div
+                    class="chat-container border-l border-r border-b px-8 pb-8 font-['DM_Sans']"
+                >
+                    <p
+                        class="text-xl leading-6 font-['DM_Sans'] text-[#A7A7A7] mb-5 uppercase text-center"
+                    >
+                        june 1
+                    </p>
+                    <div class="you">
+                        <div class="text">
+                            <p>Good afternoon, Olivia!</p>
+                            <p>How are you feeling today?</p>
+                        </div>
+                        <span class="date">10:20</span>
+                    </div>
+                    <div class="user">
+                        <div class="text">
+                            <p>Good afternoon, Dr. Lopez!</p>
+                            <p>
+                                I&apos;m good, looking forward for the
+                                appointment
+                            </p>
+                        </div>
+                        <span class="date">10:20</span>
+                    </div>
+
+                    <p
+                        class="text-xl leading-6 font-['DM_Sans'] text-[#A7A7A7] mb-5 uppercase text-center"
+                    >
+                        today
+                    </p>
+
+                    <div class="you">
+                        <div class="text">
+                            <p>Hey, Olivia!</p>
+                            <p>Are your ready for a call?</p>
+                        </div>
+                        <span class="date">10:20</span>
+                    </div>
+                    <div class="user">
+                        <div class="text">
+                            <p>Hello, Dr. Lopez</p>
+                        </div>
+                        <div class="text">
+                            <p>I&apos;m 5 minutes late, sorry!</p>
+                        </div>
+                        <span class="date">10:20</span>
+                    </div>
+                    <div class="you">
+                        <div class="text">
+                            <p>No worries, take your time 😊</p>
+                        </div>
+                        <span class="date">10:20</span>
+                    </div>
+
+                    <p
+                        class="text-base text-[#818183] flex items-center gap-4 justify-center"
+                    >
+                        <i class="fa-solid fa-video"></i>Video call started
+                    </p>
+
+                    <div class="form">
+                        <div class="file-input">
+                            <input id="fileInput" type="file" />
+                            <span
+                                class="paper-clip text-center"
+                                onclick="openFileInput()"
+                            >
+                                <i class="fa-solid fa-paperclip"></i>
+                            </span>
+                        </div>
+                        <div class="text-input">
+                            <input type="text" />
+                            <span class="emoji"
+                                ><i class="fa-regular fa-face-smile"></i
+                            ></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="font-['DM_Sans']">
+                <div class="video-container">
+                    <img class="video" src="./media/woman.avif" alt="" />
+                    <div
+                        class="bg-[#393B48] rounded-[10px] p-3 w-[150px] h-[75px] absolute top-[37px] left-[37px]"
+                    >
+                        <p class="text-base text-[#D2D5DE]">Time remaining</p>
+                        <span class="text-2xl text-white">11:29</span>
+                    </div>
+                    <div class="my-face">
+                        <img src="./media/young-beautiful.avif" alt="" />
+                    </div>
+                    <div class="controls"></div>
+                </div>
+
+                <div class="extra-btn flex items-center justify-center gap-14">
+                    <div class="btn-container">
+                        <button class="icon">
+                            <i class="fa-regular fa-circle-dot"></i>
+                        </button>
+                        <span>Record</span>
+                    </div>
+                    <div class="btn-container">
+                        <button class="icon">
+                            <i class="fa-solid fa-display"></i>
+                        </button>
+                        <span>Share screen</span>
+                    </div>
+                    <div class="btn-container">
+                        <button class="icon">CC</button>
+                        <span>Subtitles</span>
+                    </div>
+                    <div class="btn-container">
+                        <button class="icon">
+                            <i class="fa-solid fa-chalkboard"></i>
+                        </button>
+                        <span>White board</span>
+                    </div>
+                    <div class="btn-container">
+                        <button class="icon">
+                            <i class="fa-solid fa-file-video"></i>
+                        </button>
+                        <span>Meeting plan</span>
+                    </div>
+                    <div class="btn-container">
+                        <button class="icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </button>
+                        <span>Care Plan</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="./js/MenuScript.js"></script>
+
+        <script>
+            const handleMessageMenu = (id) => {
+                const messageMenu = document.querySelectorAll(".message-menu");
+                messageMenu.forEach((element) => {
+                    if (id === element.id) {
+                        element.classList.add("active");
+                    } else {
+                        element.classList.remove("active");
+                    }
+                });
+            };
+
+            const openFileInput = () => {
+                document.getElementById("fileInput").click();
+            };
+        </script>
     </body>
 </html>
