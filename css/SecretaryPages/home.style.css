@@ -1,0 +1,160 @@
+.secretary-home {
+   display: grid;
+   grid-template-columns: 412px 1fr;
+   background-color: #f8f7fc;
+   min-height: 100%;
+}
+
+.secretary-home .home-content ul li {
+   cursor: pointer;
+   position: relative;
+   padding-bottom: 20px;
+   transition: 0.3s;
+}
+
+.secretary-home .home-content ul li.active::after {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 8px;
+   position: absolute;
+   bottom: -8px;
+   background-color: #f8add0;
+   border-radius: 10px 10px 0px 0px;
+   color: #2f3241;
+}
+
+@media screen and (max-width: 1920px) {
+   .secretary-home .pulse-content {
+      grid-template-columns: 1fr;
+      gap: 50px;
+   }
+}
+
+.secretary-home .documents ul li {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   transition: 0.3s;
+   padding: 15px;
+}
+
+.secretary-home .documents ul li div.doc-img {
+   display: flex;
+   align-items: center;
+   gap: 25px;
+}
+
+.secretary-home .documents ul li span.doc {
+   display: block;
+   width: 63px;
+   height: 63px;
+   background-color: #2a659a;
+   border-radius: 50%;
+   padding: 8px 8px 0;
+   position: relative;
+   overflow: hidden;
+}
+
+.secretary-home .documents ul li span.doc i {
+   font-size: 55px;
+   color: #fff;
+   position: absolute;
+   bottom: -8px;
+   transform: rotate(25deg);
+}
+
+.secretary-home .documents ul li p {
+   display: flex;
+   gap: 0;
+}
+
+.secretary-home .documents ul li p span {
+   display: inline-block;
+   width: 216;
+   overflow: hidden;
+}
+
+.secretary-home .documents ul li .hover-effect {
+   display: none;
+   align-items: center;
+   gap: 15px;
+}
+
+.secretary-home .documents ul li .hover-effect button {
+   width: 57px;
+   height: 57px;
+   border-radius: 10px;
+   font-size: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #d8e5f0;
+   transition: 0.3s;
+}
+
+.secretary-home .documents ul li .hover-effect button:hover {
+   background-color: #2a659a;
+   color: #fff;
+}
+
+.secretary-home .documents ul li:hover {
+   background-color: #eaf1f8;
+   border-radius: 15px;
+}
+
+.secretary-home .documents ul li:hover .hover-effect {
+   display: flex;
+}
+
+.secretary-home .documents ul li:hover .size {
+   display: none;
+}
+
+.secretary-home .billing table thead tr td {
+   padding: 5px 15px;
+}
+
+.secretary-home .billing table thead tr td p span {
+   font-size: 13px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+   justify-content: center;
+}
+
+.secretary-home .billing table tbody tr td {
+   padding: 5px 15px;
+   transition: 0.3s;
+}
+
+.secretary-home .billing table tbody tr td:first-child {
+   border-radius: 14px 0 0 14px;
+}
+
+.secretary-home .billing table tbody tr td:last-child {
+   border-radius: 0 14px 14px 0;
+}
+
+.secretary-home .billing table tbody tr:hover td {
+   background-color: #f8add0;
+}
+
+@media screen and (max-width: 1920px) {
+   .secretary-home .billing-content {
+      grid-template-columns: 1fr;
+      gap: 50px;
+   }
+}
+
+.secretary-home .graph {
+   position: relative;
+}
+
+
+
+.secretary-home .graph canvas {
+   width: 500px !important;
+   margin: 0 auto;
+}

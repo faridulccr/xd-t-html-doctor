@@ -472,7 +472,10 @@
                                 </div>
                             </div>
                             <div class="graph-container">
-                                <canvas class="w-full" id="treatment-graph"></canvas>
+                                <canvas
+                                    class="w-full"
+                                    id="treatment-graph"
+                                ></canvas>
                             </div>
                         </div>
 
@@ -489,7 +492,10 @@
                                     <span
                                         class="flex items-center gap-3 text-[#F39519]"
                                     >
-                                        <i class="fa-solid fa-caret-down rotate-180"></i> +23%
+                                        <i
+                                            class="fa-solid fa-caret-down rotate-180"
+                                        ></i>
+                                        +23%
                                     </span>
                                 </p>
                                 <p
@@ -500,7 +506,10 @@
                                 </p>
                             </div>
                             <div class="graph-container">
-                                <canvas width="500px" id="payment-graph"></canvas>
+                                <canvas
+                                    width="500px"
+                                    id="payment-graph"
+                                ></canvas>
                             </div>
                         </div>
                     </div>
@@ -560,6 +569,7 @@
                             },
                         },
                         y: {
+                            beginAtZero: true,
                             display: false, // This hides the Y-axis
                         },
                     },
@@ -595,6 +605,7 @@
                             },
                         },
                         y: {
+                            beginAtZero: true,
                             display: false, // This hides the Y-axis
                         },
                     },
