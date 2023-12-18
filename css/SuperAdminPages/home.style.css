@@ -11,19 +11,6 @@
     column-gap: 20px;
 }
 
-.profile-details {
-    border-radius: 0 40px 40px 0;
-    background-color: #fff;
-}
-
-.profile-details table tr td {
-    padding: 0 30px 20px 0;
-}
-
-.profile-details ul li {
-    padding-bottom: 20px;
-}
-
 .dashboard-home-container .home-content .row-2 {
     display: grid;
     grid-template-columns: 450px 1fr;
@@ -163,7 +150,6 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 20px;
     background-color: #fff;
-    height: 440px;
     border-radius: 0 0 15px 15px;
     justify-content: center;
     align-items: center;
@@ -201,31 +187,13 @@
 }
 
 .dashboard-home-container .home-content .graph-section .graph-container {
-    height: 181px;
-    position: relative;
+    width: 100%;
 }
 
-.dashboard-home-container .home-content .graph-section .graph-container .sep {
-    position: absolute;
-    left: 0;
-    bottom: 8px;
-    text-transform: uppercase;
-    color: #666;
-}
+.dashboard-home-container .home-content .graph-section .graph-container canvas {
+    width: 500px !important;
+    height: 250px !important;
 
-.dashboard-home-container .home-content .graph-section .graph-container .jun {
-    position: absolute;
-    left: 0;
-    bottom: 8px;
-    color: #666;
-}
-
-.dashboard-home-container .home-content .graph-section .graph-container .jun::before {
-    content: "-";
     display: block;
-    position: absolute;
-    transform: rotate(90deg);
-    font-size: 20px;
-    top: -14px;
-    left: 50%;
+    margin: 0 auto;
 }

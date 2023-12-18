@@ -1,14 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+        <!----===== Boxicons CSS ===== -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+            rel="stylesheet"
+        />
 
-<body>
+        <!-- font awesome -->
+        <script
+            src="https://kit.fontawesome.com/f78c19fc0c.js"
+            crossorigin="anonymous"
+        ></script>
 
-</body>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
 
+        <!----======== CSS ======== -->
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/MenuStyle.css" />
+        <link
+            rel="stylesheet"
+            href="../css/SuperAdminPages/patients.style.css"
+        />
+
+        <title>Super Admin Patients</title>
+    </head>
+
+    <body>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="../media/logo.png" alt="" />
+                        <!----===== make the icon slightly larger ===== -->
+                    </span>
+
+                    <div class="text logo-text">
+                        <span class="name">Aspire</span>
+                        <span class="profession">EMR</span>
+                    </div>
+                </div>
+
+                <i class="bx bx-chevron-right toggle"></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <li class="search-box">
+                        <i class="bx bx-search icon"></i>
+                        <input type="text" placeholder="Search..." />
+                    </li>
+
+                    <!----===== Issue when you remove the serch bar the dark/lgiht mode toggel doens't work... ===== -->
+
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../SuperAdminPages/home.html">
+                                <i class="bx bx-home-alt icon"></i>
+                                <!----===== chnage to <i class='bx bxs-dashboard' ></i> ===== -->
+                                <span class="text nav-text">Home</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="../SuperAdminPages/patients.html">
+                                <i class="bx bx-bar-chart-alt-2 icon"></i>
+                                <!----===== chnage the to <i class='bx bxs-user-account' ></i> ===== -->
+                                <span class="text nav-text">Patients</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="../SuperAdminPages/calendar.html">
+                                <i class="bx bx-bell icon"></i>
+                                <!----===== chnage the to <i class='bx bxs-calendar' ></i>===== -->
+                                <span class="text nav-text">Calendar</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="../SuperAdminPages/messaging.html">
+                                <i class="bx bx-pie-chart-alt icon"></i>
+                                <!----===== chnage the to <i class='bx bxs-message-alt-detail' ></i>===== -->
+                                <span class="text nav-text">Messageing</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="../SuperAdminPages/billing.html">
+                                <i class="bx bx-heart icon"></i>
+                                <!----===== chnage the to <i class='bx bxs-wallet-alt' ></i>===== -->
+                                <span class="text nav-text">Billing</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="../SuperAdminPages/financials.html">
+                                <i class="bx bx-wallet icon"></i>
+                                <!----===== chnage the to <i class='bx bx-line-chart'></i>===== -->
+                                <span class="text nav-text">Financials</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="../auth/">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class="bx bx-moon icon moon"></i>
+                            <i class="bx bx-sun icon sun"></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <header class="profile-header font-['Roboto']">
+            <p class="title">Patients</p>
+            <div class="flex items-center gap-5">
+                <img
+                    class="w-[50px] h-[50px] rounded-full"
+                    src="../media/woman.avif"
+                    alt=""
+                />
+                <div>
+                    <p class="text-[20px] text-[#A4A4A4]">T. Hill</p>
+                    <p class="text-[16px] leading-[21px]">Secretary</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="main-content super-admin-patient">
+            <div class="profile-details p-8">
+                <div class="text-center mb-[90px]">
+                    <img
+                        class="w-[122px] h-[122px] rounded-full inline-block mb-7"
+                        src="../media/woman.avif"
+                        alt="user"
+                    />
+                    <h3
+                        class="text-[32px] text-[#2F3241] leading-[38px] font-[600]"
+                    >
+                        Olivia Wild
+                    </h3>
+                    <p class="text-[20px] text-[#626264] leading-[24px]">
+                        Female
+                    </p>
+                </div>
+
+                <div class="general-info">
+                    <h3
+                        class="text-[24px] leading-[29px] font-[600] text-[#000009] mb-6"
+                    >
+                        General Info
+                    </h3>
+                    <table>
+                        <tbody
+                            class="text-[18px] leading-[22px] text-[#626264]"
+                        >
+                            <tr>
+                                <td>Phone</td>
+                                <td class="text-[#2A659A]">520-909-0865</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td class="text-[#2A659A]">
+                                    name.name@gmail.com
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Location</td>
+                                <td class="text-[#2A659A]">Scottsdale AZ</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    Date of Birth
+                                    <span class="text-[#2A659A]">
+                                        &nbsp; 00/00/0000
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    Medical Record Number
+                                    <span class="text-[#2A659A]">
+                                        &nbsp;247992029AB
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="active-employees mt-[18px]">
+                    <h3
+                        class="text-[24px] leading-[29px] font-[600] text-[#000009] mb-6"
+                    >
+                        Referrals
+                    </h3>
+                    <ul class="text-[18px] leading-[22px] text-[#626264]">
+                        <li>OCTOBER 2023 - SPOOKY15</li>
+                        <li>FIRST VISIT - WELCOME10</li>
+                        <li>Results 3</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="patient-content pl-4 pt-5">
+                <div class="flex justify-between items-center">
+                    <!--  menu  -->
+                    <ul
+                        class="flex items-center justify-center gap-10 font-['DM_Sans'] text-[#5F5F5F] text-xl"
+                    >
+                        <li
+                            class="btn-menu active"
+                            onclick="handleMenu('btn-menu', 'patients')"
+                            id="patients"
+                        >
+                            Patients
+                        </li>
+                        <li
+                            class="btn-menu"
+                            onclick="handleMenu('btn-menu', 'soaps')"
+                            id="soaps"
+                        >
+                            SOAPs
+                        </li>
+                        <li
+                            class="btn-menu"
+                            onclick="handleMenu('btn-menu', 'labs')"
+                            id="labs"
+                        >
+                            Labs
+                        </li>
+                        <li
+                            class="btn-menu"
+                            onclick="handleMenu('btn-menu', 'documents')"
+                            id="documents"
+                        >
+                            Documents
+                        </li>
+                    </ul>
+
+                    <div
+                        class="mb-[14px] w-fit ml-auto flex items-center gap-4 pr-7"
+                    >
+                        <img
+                            class="w-[50px] h-[50px] rounded-[9px]"
+                            src="../media/woman.avif"
+                            alt="user"
+                        />
+                        <div>
+                            <h3 class="text-[18px] leading-[22px] text-[#000]">
+                                Dr. Ashley
+                            </h3>
+                            <p
+                                class="text-[14px] leading-[17px] text-[#A4A4A4]"
+                            >
+                                Super Admin
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+                <div class="my-patient-sec font-['DM_Sans'] pr-4">
+                    <div class="mt-6 flex justify-between">
+                        <p class="font-semibold text-3xl text-[#2F3241]">
+                            My Patients
+                        </p>
+                        <div class="btn-container flex items-center gap-3">
+                            <div class="search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" />
+                            </div>
+                            <button class="bg-[#2A659A] text-white">
+                                <i class="fa-solid fa-right-left"></i>
+                            </button>
+                            <button class="bg-[#D8E5F0]">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="table-container mt-5">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <p>
+                                            Branch
+                                            <span>
+                                                <i
+                                                    class="fa-solid fa-angle-up"
+                                                ></i>
+                                                <i
+                                                    class="fa-solid fa-angle-up rotate-180"
+                                                ></i>
+                                            </span>
+                                        </p>
+                                    </th>
+                                    <th>
+                                        <p>
+                                            Diagnosis
+                                            <span>
+                                                <i
+                                                    class="fa-solid fa-angle-up"
+                                                ></i>
+                                                <i
+                                                    class="fa-solid fa-angle-up rotate-180"
+                                                ></i>
+                                            </span>
+                                        </p>
+                                    </th>
+                                    <th>
+                                        <p>
+                                            Importance
+                                            <span>
+                                                <i
+                                                    class="fa-solid fa-angle-up"
+                                                ></i>
+                                                <i
+                                                    class="fa-solid fa-angle-up rotate-180"
+                                                ></i>
+                                            </span>
+                                        </p>
+                                    </th>
+                                    <th>
+                                        <p>
+                                            File Type
+                                            <span>
+                                                <i
+                                                    class="fa-solid fa-angle-up"
+                                                ></i>
+                                                <i
+                                                    class="fa-solid fa-angle-up rotate-180"
+                                                ></i>
+                                            </span>
+                                        </p>
+                                    </th>
+                                    <th>
+                                        <p>
+                                            Upload Date
+                                            <span>
+                                                <i
+                                                    class="fa-solid fa-angle-up"
+                                                ></i>
+                                                <i
+                                                    class="fa-solid fa-angle-up rotate-180"
+                                                ></i>
+                                            </span>
+                                        </p>
+                                    </th>
+                                    <th>
+                                        <p>
+                                            Treatment Team
+                                            <span>
+                                                <i
+                                                    class="fa-solid fa-angle-up"
+                                                ></i>
+                                                <i
+                                                    class="fa-solid fa-angle-up rotate-180"
+                                                ></i>
+                                            </span>
+                                        </p>
+                                    </th>
+                                    <th>
+                                        <p>
+                                            Comment
+                                            <span>
+                                                <i
+                                                    class="fa-solid fa-angle-up"
+                                                ></i>
+                                                <i
+                                                    class="fa-solid fa-angle-up rotate-180"
+                                                ></i>
+                                            </span>
+                                        </p>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>Confidential</td>
+                                    <td>High</td>
+                                    <td>Engagement Letter</td>
+                                    <td>00/00/0000</td>
+                                    <td>Author</td>
+                                    <td>No Comment</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="../js/MenuScript.js"></script>
+        <script>
+            const handleMenu = (class_name, id) => {
+                const messageMenu = document.querySelectorAll(`.${class_name}`);
+                messageMenu.forEach((element) => {
+                    if (id === element.id) {
+                        element.classList.add("active");
+                    } else {
+                        element.classList.remove("active");
+                    }
+                });
+            };
+        </script>
+    </body>
 </html>

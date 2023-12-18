@@ -10,12 +10,14 @@
             href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
             rel="stylesheet"
         />
+
         <!-- font awesome -->
         <script
             src="https://kit.fontawesome.com/f78c19fc0c.js"
             crossorigin="anonymous"
         ></script>
 
+        <!-- Tailwind CSS -->
         <script src="https://cdn.tailwindcss.com"></script>
 
         <!----======== CSS ======== -->
@@ -136,9 +138,7 @@
                     alt=""
                 />
                 <div>
-                    <p class="text-[20px] text-[#A4A4A4]">
-                        T. Hill
-                    </p>
+                    <p class="text-[20px] text-[#A4A4A4]">T. Hill</p>
                     <p class="text-[16px] leading-[21px]">Secretary</p>
                 </div>
             </div>
@@ -471,12 +471,38 @@
                                     <p class="font-bold">4.70%</p>
                                 </div>
                             </div>
-                            <div className="graph-container">
-                                <div id="treatment-graph"></div>
+                            <div class="graph-container">
+                                <canvas class="w-full" id="treatment-graph"></canvas>
                             </div>
-                            <p className="jun">Jun</p>
                         </div>
-                        <!-- <PaymentGraph /> -->
+
+                        <!-- PaymentGraph -->
+                        <div class="total-payment">
+                            <div>
+                                <h1 class="text-[#2B3674] font-bold text-3xl">
+                                    $ 250K
+                                </h1>
+                                <p
+                                    class="text-[#498FCD] text-[11px] flex gap-1 items-center font-semibold"
+                                >
+                                    Total Payments &nbsp;
+                                    <span
+                                        class="flex items-center gap-3 text-[#F39519]"
+                                    >
+                                        <i class="fa-solid fa-caret-down rotate-180"></i> +23%
+                                    </span>
+                                </p>
+                                <p
+                                    class="text-[#F39519] font-bold text-[15px] mt-5 flex items-center gap-2"
+                                >
+                                    <i class="fa-solid fa-circle-check"></i> On
+                                    track
+                                </p>
+                            </div>
+                            <div class="graph-container">
+                                <canvas width="500px" id="payment-graph"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -494,6 +520,86 @@
                     }
                 });
             };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const treatmentCtx = document.getElementById("treatment-graph");
+
+            new Chart(treatmentCtx, {
+                type: "line",
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July"],
+                    datasets: [
+                        {
+                            label: "Overall Growth",
+                            data: [12, 5, 13, 15, 12, 2, 7],
+                            borderWidth: 4,
+                            borderColor: "#26A0FC",
+                        },
+                        {
+                            label: "Monthly",
+                            data: [2, 19, 3, 5, 10, 3, 17],
+                            borderWidth: 4,
+                            borderColor: "#2B3674",
+                            borderDash: [5, 5],
+                        },
+                        {
+                            label: "Daily",
+                            data: [10, 1, 6, 10, 2, 13, 14],
+                            borderWidth: 4,
+                            borderColor: "#FEBC3B",
+                            borderDash: [5, 5],
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false,
+                            },
+                        },
+                        y: {
+                            display: false, // This hides the Y-axis
+                        },
+                    },
+                },
+            });
+
+            const paymentCtx = document.getElementById("payment-graph");
+
+            new Chart(paymentCtx, {
+                type: "line",
+                data: {
+                    labels: ["SEP", "OCT", "NOV", "DEC", "JUN", "FEB"],
+                    datasets: [
+                        {
+                            label: "Overall Growth",
+                            data: [12, 5, 13, 10, 12, 2, 7],
+                            borderWidth: 4,
+                            borderColor: "#498FCD",
+                        },
+                        {
+                            label: "Monthly",
+                            data: [2, 10, 3, 5, 10, 13, 14],
+                            borderWidth: 4,
+                            borderColor: "#6AD2FF",
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false,
+                            },
+                        },
+                        y: {
+                            display: false, // This hides the Y-axis
+                        },
+                    },
+                },
+            });
         </script>
     </body>
 </html>
