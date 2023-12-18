@@ -1,0 +1,54 @@
+.calender {
+   display: grid;
+   grid-template-columns: 412px 1fr;
+   background-color: #f8f7fc;
+   min-height: 100%;
+}
+
+.calender .calender-container div.fc-header-toolbar.fc-toolbar {
+   background-color: #d8e5f0;
+   border-radius: 15px 15px 0 0;
+   padding: 20px;
+}
+
+#modal {
+   opacity: 1;
+   padding: 20px;
+   padding-bottom: 10px;
+   z-index: 999;
+   overflow: hidden;
+}
+
+#modal input {
+   border-color: #fff;
+   padding: 10px 20px;
+   border-radius: 5px;
+   color: #fff;
+   outline: 0;
+}
+
+#modal input::placeholder {
+   color: rgba(255, 255, 255, 0.8);
+}
+
+#modal button#save {
+   color: #fff;
+   margin-top: 10px;
+   background-color: orange;
+   padding: 5px 10px;
+   border-radius: 5px;
+   margin-left: auto;
+   display: block;
+}
+
+#modal .modal-action {
+   position: absolute;
+   top: -22px;
+   right: -22px;
+   background-color: #CA6090;
+   padding: 3px 5px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
