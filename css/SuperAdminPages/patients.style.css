@@ -1,8 +1,15 @@
 .super-admin-patient {
    display: grid;
-   grid-template-columns: 412px 1fr;
+   grid-template-columns: auto 1fr;
    background-color: #f8f7fc;
-   min-height: 100vh;
+   min-height: calc(100vh - 73px);
+   padding-top: 0 !important;
+   padding-left: 0 !important;
+}
+
+.profile-details {
+   max-width: 412px !important;
+   height: calc(100vh - 73px);
 }
 
 .patient-content ul li {
@@ -69,6 +76,7 @@
    width: 100%;
    background-color: White;
    padding-bottom: 15px;
+   border-radius: 15px;
 }
 
 .table-container table thead tr th {
@@ -115,6 +123,38 @@
 }
 
 @media screen and (max-width: 1920px) {
+
+   .profile-details {
+      max-width: 412px !important;
+      height: calc(100vh - 66px);
+   }
+
+   .profile-details .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 20px
+   }
+
+   .profile-details .user-profile img {
+      margin-bottom: 0;
+   }
+
+   .my-patient-sec .btn-container .search {
+      padding: 3px 8px;
+      font-size: 15px;
+      height: 40px;
+   }
+
+   .my-patient-sec .btn-container .search input[type="text"] {
+      font-size: 15px;
+   }
+
+   .my-patient-sec .btn-container button {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+   }
+
    .my-patient-sec {
       position: relative;
    }
@@ -123,10 +163,20 @@
       position: absolute;
       width: 100%;
       overflow: auto;
-      max-height: 650px;
+      max-height: 440px;
    }
 
    .my-patient-sec .table-container table {
-      min-width: 600px;
+      min-width: 950px !important;
+   }
+
+   .table-container table thead tr th {
+      font-size: 15px;
+      line-height: 1;
+      padding: 5px 8px;
+   }
+
+   .table-container table tbody tr td {
+      padding: 5px 8px;
    }
 }

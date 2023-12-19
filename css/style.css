@@ -20,7 +20,7 @@ body {
 @media screen and (max-width: 1920px) {
     body {
         height: 100vh;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 }
 
@@ -37,7 +37,7 @@ img {
 
 .profile-details table {
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .profile-details table tr td {
