@@ -56,35 +56,35 @@
 
                         <li class="nav-link">
                             <a href="./SuperAdminPages/patients.html">
-                                <i class='bx bxs-user-account icon' ></i>
+                                <i class="bx bxs-user-account icon"></i>
                                 <span class="text nav-text">Patients</span>
                             </a>
                         </li>
 
                         <li class="nav-link">
                             <a href="./SuperAdminPages/calendar.html">
-                                <i class='bx bxs-calendar icon' ></i>
+                                <i class="bx bxs-calendar icon"></i>
                                 <span class="text nav-text">Calendar</span>
                             </a>
                         </li>
 
                         <li class="nav-link">
                             <a href="./SuperAdminPages/messaging.html">
-                                <i class='bx bxs-message-alt-detail icon' ></i>
+                                <i class="bx bxs-message-alt-detail icon"></i>
                                 <span class="text nav-text">Messaging</span>
                             </a>
                         </li>
 
                         <li class="nav-link">
                             <a href="./SuperAdminPages/billing.html">
-                                <i class='bx bxs-wallet-alt icon' ></i>
+                                <i class="bx bxs-wallet-alt icon"></i>
                                 <span class="text nav-text">Billing</span>
                             </a>
                         </li>
 
                         <li class="nav-link">
                             <a href="./SuperAdminPages/financials.html">
-                                <i class='bx bx-line-chart icon'></i>
+                                <i class="bx bx-line-chart icon"></i>
                                 <span class="text nav-text">Financials</span>
                             </a>
                         </li>
@@ -131,10 +131,10 @@
 
         <!-- home content -->
         <section class="main-content super-admin-home py-6 px-4">
-            <div class="w-[425px]">
+            <div class="col-1 w-[425px]">
                 <!-- profile -->
                 <div
-                    class="flex items-center justify-center gap-6 mt-10 font-['DM_Sans']"
+                    class="user-profile flex items-center justify-center gap-6 mt-10 font-['DM_Sans']"
                 >
                     <img
                         class="w-[89px] h-[94px] rounded-full"
@@ -157,8 +157,8 @@
                             class="text-[#626264] text-base flex items-start gap-3"
                         >
                             Female
-                            <span class="text-[13px]">
-                                <i class="fa-solid fa-circle"></i>
+                            <span>
+                                <i class="fa-solid fa-circle text-[10px]"></i>
                             </span>
                             81 y.o.
                         </p>
@@ -167,7 +167,7 @@
 
                 <!-- menu -->
                 <ul
-                    class="my-7 flex items-center justify-center gap-10 font-['DM_Sans'] text-[#5F5F5F] text-xl border-b"
+                    class="menu my-7 flex items-center justify-center gap-10 font-['DM_Sans'] text-[#5F5F5F] text-xl border-b"
                 >
                     <li
                         class="message-menu"
@@ -202,63 +202,64 @@
                 <div
                     class="chat-container border-l border-r border-b px-8 pb-8 font-['DM_Sans']"
                 >
-                    <p
-                        class="text-xl leading-6 font-['DM_Sans'] text-[#A7A7A7] mb-5 uppercase text-center"
-                    >
-                        june 1
-                    </p>
-                    <div class="you">
-                        <div class="text">
-                            <p>Good afternoon, Olivia!</p>
-                            <p>How are you feeling today?</p>
+                    <div class="content">
+                        <p
+                            class="text-base text-[#818183] flex items-center gap-4 justify-center"
+                        >
+                            <i class="fa-solid fa-video"></i>Video call started
+                        </p>
+                        <div class="you">
+                            <div class="text">
+                                <p>No worries, take your time 😊</p>
+                            </div>
+                            <span class="date">10:20</span>
                         </div>
-                        <span class="date">10:20</span>
-                    </div>
-                    <div class="user">
-                        <div class="text">
-                            <p>Good afternoon, Dr. Lopez!</p>
-                            <p>
-                                I&apos;m good, looking forward for the
-                                appointment
-                            </p>
+                        <div class="user">
+                            <div class="text">
+                                <p>Hello, Dr. Lopez</p>
+                            </div>
+                            <div class="text">
+                                <p>I&apos;m 5 minutes late, sorry!</p>
+                            </div>
+                            <span class="date">10:20</span>
                         </div>
-                        <span class="date">10:20</span>
-                    </div>
 
-                    <p
-                        class="text-xl leading-6 font-['DM_Sans'] text-[#A7A7A7] mb-5 uppercase text-center"
-                    >
-                        today
-                    </p>
+                        <div class="you">
+                            <div class="text">
+                                <p>Hey, Olivia!</p>
+                                <p>Are your ready for a call?</p>
+                            </div>
+                            <span class="date">10:20</span>
+                        </div>
+                        <p
+                            class="text-xl leading-6 font-['DM_Sans'] text-[#A7A7A7] mb-5 uppercase text-center"
+                        >
+                            today
+                        </p>
+                        <div class="user">
+                            <div class="text">
+                                <p>Good afternoon, Dr. Lopez!</p>
+                                <p>
+                                    I&apos;m good, looking forward for the
+                                    appointment
+                                </p>
+                            </div>
+                            <span class="date">10:20</span>
+                        </div>
+                        <div class="you">
+                            <div class="text">
+                                <p>Good afternoon, Olivia!</p>
+                                <p>How are you feeling today?</p>
+                            </div>
+                            <span class="date">10:20</span>
+                        </div>
 
-                    <div class="you">
-                        <div class="text">
-                            <p>Hey, Olivia!</p>
-                            <p>Are your ready for a call?</p>
-                        </div>
-                        <span class="date">10:20</span>
+                        <p
+                            class="text-xl leading-6 font-['DM_Sans'] text-[#A7A7A7] mb-5 uppercase text-center"
+                        >
+                            june 1
+                        </p>
                     </div>
-                    <div class="user">
-                        <div class="text">
-                            <p>Hello, Dr. Lopez</p>
-                        </div>
-                        <div class="text">
-                            <p>I&apos;m 5 minutes late, sorry!</p>
-                        </div>
-                        <span class="date">10:20</span>
-                    </div>
-                    <div class="you">
-                        <div class="text">
-                            <p>No worries, take your time 😊</p>
-                        </div>
-                        <span class="date">10:20</span>
-                    </div>
-
-                    <p
-                        class="text-base text-[#818183] flex items-center gap-4 justify-center"
-                    >
-                        <i class="fa-solid fa-video"></i>Video call started
-                    </p>
 
                     <div class="form">
                         <div class="file-input">
@@ -284,7 +285,7 @@
                 <div class="video-container">
                     <img class="video" src="./media/woman.avif" alt="" />
                     <div
-                        class="bg-[#393B48] rounded-[10px] p-3 w-[150px] h-[75px] absolute top-[37px] left-[37px]"
+                        class="date bg-[#393B48] rounded-[10px] p-3"
                     >
                         <p class="text-base text-[#D2D5DE]">Time remaining</p>
                         <span class="text-2xl text-white">11:29</span>

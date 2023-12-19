@@ -2,8 +2,6 @@
    display: grid;
    grid-template-columns: auto 1fr;
    gap: 44px;
-   min-width: 1210px;
-   margin: 0 auto;
 }
 
 .super-admin-home ul li {
@@ -22,6 +20,14 @@
    bottom: 0;
    background-color: #f8add0;
    border-radius: 10px 10px 0px 0px;
+}
+
+.chat-container .content {
+   min-width: 350px;
+   height: 1000px;
+   display: flex;
+   flex-direction: column-reverse;
+   overflow: auto;
 }
 
 .chat-container .you,
@@ -129,26 +135,24 @@
 
 .video-container {
    position: relative;
+   width: 100%;
+   max-width: 1350px;
+   margin: 0 auto;
 }
 
 .video-container img.video {
    width: 100%;
-   height: auto;
-   max-height: 921px;
+   height: 1000px;
    border-radius: 30px;
+   margin: 0 auto;
 }
 
-@media screen and (max-width: 1450px) {
-   .video-container img.video {
-      height: 580px;
-   }
-}
-
-@media screen and (min-width: 1920px) {
-   .video-container img.video {
-      width: 1425px;
-      height: 921px;
-   }
+.video-container .date {
+   position: absolute;
+   width: 150px;
+   height: 75px;
+   top: 37px;
+   left: 37px;
 }
 
 .video-container .my-face img {
@@ -159,6 +163,31 @@
    position: absolute;
    top: 37px;
    right: 37px;
+}
+
+@media screen and (max-width: 1920px) {
+
+   .video-container {
+      max-width: 700px;
+   }
+
+   .video-container img.video {
+      height: 470px;
+   }
+
+   .video-container .date {
+      width: 150px;
+      height: 75px;
+      top: 10px;
+      left: 10px;
+   }
+
+   .video-container .my-face img {
+      top: 10px;
+      right: 10px;
+      width: 140px;
+      height: 140px;
+   }
 }
 
 .extra-btn {
@@ -189,4 +218,110 @@
    font: 16px/19px DM Sans;
    letter-spacing: 0px;
    color: #707070;
+}
+
+@media screen and (min-width: 1920px) {
+   .video-container img.video {
+      width: 1425px;
+      height: 921px;
+   }
+}
+
+@media screen and (max-width: 1920px) {
+
+   .col-1 {
+      width: fit-content;
+   }
+
+   .col-1 .user-profile {
+      margin-top: 0;
+   }
+
+   .col-1 .user-profile img {
+      width: 60px;
+      height: 60px;
+   }
+
+   .col-1 .user-profile h3 {
+      font-size: 1rem;
+      line-height: 1;
+   }
+
+   .col-1 .user-profile a {
+      font-size: 0.8rem;
+      line-height: 1;
+   }
+
+   .col-1 .user-profile p {
+      font-size: 12px;
+      line-height: 1;
+   }
+
+   .col-1 ul.menu {
+      margin: 2px 0 5px;
+      font-size: 1rem;
+   }
+
+   .super-admin-home ul.menu li {
+      padding-bottom: 6px;
+   }
+
+   .chat-container {
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+
+   .chat-container .text-xl {
+      font-size: 1rem;
+      line-height: 1;
+   }
+
+   .chat-container .content {
+      height: 385px;
+   }
+
+   .chat-container .you,
+   .chat-container .user {
+      margin-bottom: 5px;
+   }
+
+   .chat-container .you .text,
+   .chat-container .user .text {
+      font-size: 1rem;
+      line-height: 1.2;
+      padding: 5px;
+   }
+
+   .chat-container .you .date,
+   .chat-container .user .date {
+      font-size: 10px;
+      line-height: 1;
+   }
+
+   .chat-container .form .file-input,
+   .chat-container .form .text-input {
+      height: 50px;
+      padding: 10px 5px;
+   }
+
+   .chat-container .form .text-input .emoji {
+      font-size: 20px;
+      cursor: pointer;
+   }
+
+
+   .extra-btn {
+      margin-top: 20px;
+   }
+
+   .extra-btn .btn-container {
+      gap: 5px;
+   }
+
+   .extra-btn .icon {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+   }
 }
