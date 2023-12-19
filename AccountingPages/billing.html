@@ -28,105 +28,91 @@
   </head>
 
   <body>
-      <nav class="sidebar close">
-          <header>
-              <div class="image-text">
-                  <span class="image">
-                      <img src="../media/logo.png" alt="" />
-                      <!----===== make the icon slightly larger ===== -->
-                  </span>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../media/logo.png" alt="" />
+                </span>
 
-                  <div class="text logo-text">
-                      <span class="name">Aspire</span>
-                      <span class="profession">EMR</span>
-                  </div>
-              </div>
+                <div class="text logo-text">
+                    <span class="name">Aspire</span>
+                    <span class="profession">EMR</span>
+                </div>
+            </div>
 
-              <i class="bx bx-chevron-right toggle"></i>
-          </header>
+            <i class="bx bx-chevron-right toggle"></i>
+        </header>
 
-          <div class="menu-bar">
-              <div class="menu">
-                  <li class="search-box">
-                      <i class="bx bx-search icon"></i>
-                      <input type="text" placeholder="Search..." />
-                  </li>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="./home.html">
+                            <i class="bx bxs-dashboard icon"></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
 
-                  <!----===== Issue when you remove the serch bar the dark/lgiht mode toggel doens't work... ===== -->
+                    <li class="nav-link">
+                        <a href="./patients.html">
+                            <i class="bx bxs-user-account icon"></i>
+                            <span class="text nav-text">Patients</span>
+                        </a>
+                    </li>
 
-                  <ul class="menu-links">
-                      <li class="nav-link">
-                          <a href="./home.html">
-                              <i class="bx bx-home-alt icon"></i>
-                              <!----===== chnage to <i class='bx bxs-dashboard' ></i> ===== -->
-                              <span class="text nav-text">Home</span>
-                          </a>
-                      </li>
+                    <li class="nav-link">
+                        <a href="./calendar.html">
+                            <i class="bx bxs-calendar icon"></i>
+                            <span class="text nav-text">Calendar</span>
+                        </a>
+                    </li>
 
-                      <li class="nav-link">
-                          <a href="./patients.html">
-                              <i class="bx bx-bar-chart-alt-2 icon"></i>
-                              <!----===== chnage the to <i class='bx bxs-user-account' ></i> ===== -->
-                              <span class="text nav-text">Patients</span>
-                          </a>
-                      </li>
+                    <li class="nav-link">
+                        <a href="./messaging.html">
+                            <i class="bx bxs-message-alt-detail icon"></i>
+                            <span class="text nav-text">Messaging</span>
+                        </a>
+                    </li>
 
-                      <li class="nav-link">
-                          <a href="./calendar.html">
-                              <i class="bx bx-bell icon"></i>
-                              <!----===== chnage the to <i class='bx bxs-calendar' ></i>===== -->
-                              <span class="text nav-text">Calendar</span>
-                          </a>
-                      </li>
+                    <li class="nav-link">
+                        <a href="./billing.html">
+                            <i class="bx bxs-wallet-alt icon"></i>
+                            <span class="text nav-text">Billing</span>
+                        </a>
+                    </li>
 
-                      <li class="nav-link">
-                          <a href="./messaging.html">
-                              <i class="bx bx-pie-chart-alt icon"></i>
-                              <!----===== chnage the to <i class='bx bxs-message-alt-detail' ></i>===== -->
-                              <span class="text nav-text">Messaging</span>
-                          </a>
-                      </li>
+                    <li class="nav-link">
+                        <a href="./financials.html">
+                            <i class="bx bx-line-chart icon"></i>
+                            <span class="text nav-text">Financials</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-                      <li class="nav-link">
-                          <a href="./billing.html">
-                              <i class="bx bx-heart icon"></i>
-                              <!----===== chnage the to <i class='bx bxs-wallet-alt' ></i>===== -->
-                              <span class="text nav-text">Billing</span>
-                          </a>
-                      </li>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="./auth/">
+                        <i class="bx bx-log-out icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
 
-                      <li class="nav-link">
-                          <a href="./financials.html">
-                              <i class="bx bx-wallet icon"></i>
-                              <!----===== chnage the to <i class='bx bx-line-chart'></i>===== -->
-                              <span class="text nav-text">Financials</span>
-                          </a>
-                      </li>
-                  </ul>
-              </div>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class="bx bx-moon icon moon"></i>
+                        <i class="bx bx-sun icon sun"></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
 
-              <div class="bottom-content">
-                  <li class="">
-                      <a href="../auth/">
-                          <i class="bx bx-log-out icon"></i>
-                          <span class="text nav-text">Logout</span>
-                      </a>
-                  </li>
-
-                  <li class="mode">
-                      <div class="sun-moon">
-                          <i class="bx bx-moon icon moon"></i>
-                          <i class="bx bx-sun icon sun"></i>
-                      </div>
-                      <span class="mode-text text">Dark mode</span>
-
-                      <div class="toggle-switch">
-                          <span class="switch"></span>
-                      </div>
-                  </li>
-              </div>
-          </div>
-      </nav>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
 
       <header class="profile-header font-['Roboto']">
           <p class="title">Billing</p>

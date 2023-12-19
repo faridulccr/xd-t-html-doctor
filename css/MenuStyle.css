@@ -141,7 +141,7 @@ header .image-text .profession {
 }
 
 .sidebar header .image img {
-    width: 40px;
+    width: 60px;
     border-radius: 6px;
 }
 
@@ -302,13 +302,14 @@ body.dark .switch::before {
 }
 
 header.profile-header {
-    margin-left: 90px;
+    margin-left: 250px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
     background-color: #fff;
     border-bottom: 1px solid #E4E4EB;
+    transform: 0.3s;
 }
 
 header.profile-header .title {
@@ -318,7 +319,8 @@ header.profile-header .title {
 }
 
 section.main-content {
-    margin-left: 90px;
+    margin-left: 250px;
+    transform: 0.3s;
 }
 
 .main-content .text {
@@ -328,11 +330,11 @@ section.main-content {
     padding: 12px 60px;
 }
 
-/* .sidebar.close ~ .main-content {
-    left: 78px;
-    height: 100vh;
-    width: calc(100% - 78px);
-} */
+.sidebar.close~.main-content,
+.sidebar.close~.profile-header {
+    margin-left: 90px;
+    transform: 0.3s;
+}
 
 /* body.dark .main-content .text {
     color: var(--text-color);

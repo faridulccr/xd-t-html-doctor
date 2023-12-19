@@ -1,133 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!----======== CSS ======== -->
+        <link rel="stylesheet" href="../css/MenuStyle.css" />
 
-    <!----======== CSS ======== -->
-    <link rel="stylesheet" href="../css/MenuStyle.css">
+        <!----===== Boxicons CSS ===== -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+            rel="stylesheet"
+        />
 
-    <!----===== Boxicons CSS ===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <title>Dashboard Sidebar ClinicalMenu</title>
+    </head>
 
-    <title>Dashboard Sidebar ClinicalMenu</title>
-</head>
+    <body>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="../media/logo.png" alt="" />
+                    </span>
 
-<body>
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="../media/logo.png" alt="">   
-                    <!----===== make the icon slightly larger ===== -->
-                </span>
+                    <div class="text logo-text">
+                        <span class="name">Aspire</span>
+                        <span class="profession">EMR</span>
+                    </div>
+                </div>
 
-                <div class="text logo-text">
-                    <span class="name">Aspire</span>
-                    <span class="profession">EMR</span>
+                <i class="bx bx-chevron-right toggle"></i>
+            </header>
+
+            <div class="menu-bar">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="../ClinicalPages/home.html">
+                                <i class='bx bxs-dashboard icon' ></i>
+                                <span class="text nav-text">Home</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="../ClinicalPages/patients.html">
+                                <i class='bx bxs-user-account icon' ></i>
+                                <span class="text nav-text">Patients</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="../ClinicalPages/calendar.html">
+                                <i class='bx bxs-calendar icon' ></i>
+                                <span class="text nav-text">Calendar</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="../ClinicalPages/messaging.html">
+                                <i class='bx bxs-message-alt-detail icon' ></i>
+                                <span class="text nav-text">Messaging</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="../ClinicalPages/billing.html">
+                                <i class='bx bxs-wallet-alt icon' ></i>
+                                <span class="text nav-text">Billing</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="../ClinicalPages/financials.html">
+                                <i class='bx bx-line-chart icon'></i>
+                                <span class="text nav-text">Financials</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="../auth/">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class="bx bx-moon icon moon"></i>
+                            <i class="bx bx-sun icon sun"></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
                 </div>
             </div>
+        </nav>
 
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
+        <section class="home">
+            <div class="text">Home</div>
 
-        <div class="menu-bar">
-            <div class="menu">
+            <!----===== Create Header Here, the text above will display the what page the user is on for exmaple Home ===== -->
+        </section>
 
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li>
-
-                <!----===== Issue when you remove the serch bar the dark/lgiht mode toggel doens't work... ===== -->
-
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="../ClinicalPages/home.html">
-                            <i class='bx bx-home-alt icon'></i>
-                            <!----===== chnage to <i class='bx bxs-dashboard' ></i> ===== -->
-                            <span class="text nav-text">Home</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="../ClinicalPages/patients.html">
-                            <i class='bx bx-bar-chart-alt-2 icon'></i>
-                            <!----===== chnage the to <i class='bx bxs-user-account' ></i> ===== -->
-                            <span class="text nav-text">Patients</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="../ClinicalPages/calendar.html">
-                            <i class='bx bx-bell icon'></i>
-                            <!----===== chnage the to <i class='bx bxs-calendar' ></i>===== -->
-                            <span class="text nav-text">Calendar</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="../ClinicalPages/messaging.html">
-                            <i class='bx bx-pie-chart-alt icon'></i>
-                            <!----===== chnage the to <i class='bx bxs-message-alt-detail' ></i>===== -->
-                            <span class="text nav-text">Messageing</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="../ClinicalPages/billing.html">
-                            <i class='bx bx-heart icon'></i>
-                            <!----===== chnage the to <i class='bx bxs-wallet-alt' ></i>===== -->
-                            <span class="text nav-text">Billing</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="../ClinicalPages/financials.html">
-                            <i class='bx bx-wallet icon'></i>
-                            <!----===== chnage the to <i class='bx bx-line-chart'></i>===== -->
-                            <span class="text nav-text">Financials</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="bottom-content">
-                <li class="">
-                    <a href="../auth/">
-                        <i class='bx bx-log-out icon'></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Dark mode</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-
-            </div>
-        </div>
-
-    </nav>
-
-    <section class="home">
-        <div class="text">Home</div>
-
-        <!----===== Create Header Here, the text above will display the what page the user is on for exmaple Home ===== -->
-    </section>
-
-    <script src="../js/MenuScript.js"></script>
-
-</body>
-
+        <script src="../js/MenuScript.js"></script>
+    </body>
 </html>
