@@ -132,20 +132,22 @@
 
         <section class="main-content clinic-manager-home">
             <div class="profile-details p-8">
-                <div class="text-center mb-[90px]">
+                <div class="user-profile text-center mb-[90px]">
                     <img
                         class="w-[122px] h-[122px] rounded-full inline-block mb-7"
                         src="../media/woman.avif"
                         alt="user"
                     />
-                    <h3
-                        class="text-[32px] text-[#2F3241] leading-[38px] font-[600]"
-                    >
-                        Olivia Wild
-                    </h3>
-                    <p class="text-[20px] text-[#626264] leading-[24px]">
-                        Female
-                    </p>
+                    <div>
+                        <h3
+                            class="text-[32px] text-[#2F3241] leading-[38px] font-[600]"
+                        >
+                            Olivia Wild
+                        </h3>
+                        <p class="text-[20px] text-[#626264] leading-[24px]">
+                            Female
+                        </p>
+                    </div>
                 </div>
 
                 <div class="general-info">
@@ -206,7 +208,7 @@
                 </div>
             </div>
 
-            <div class="home-content pl-4 pt-5">
+            <div class="home-content pl-4 2xl:pt-5">
                 <div class="flex justify-between items-center">
                     <!--  menu  -->
                     <ul
@@ -268,21 +270,23 @@
                     <!-- ToDo section start -->
                     <div>
                         <div
-                            class="bg-[#D8E5F0] rounded-tl-[15px] rounded-tr-[15px] px-5 py-3"
+                            class="bg-[#D8E5F0] rounded-tl-[15px] rounded-tr-[15px] px-3 2xl:px-5 py-1 2xl:py-3"
                         >
                             <h3
-                                class="text-[28px] leading-[34px] text-[#2F3241]"
+                                class="text-[18px] 2xl:text-[28px] 2xl:leading-[34px] text-[#2F3241]"
                             >
                                 To Do
                             </h3>
                         </div>
                         <div
-                            class="bg-white p-5 rounded-bl-[15px] rounded-br-[15px]"
+                            class="bg-white p-2 2xl:p-5 rounded-bl-[15px] rounded-br-[15px]"
                         >
                             <div
-                                class="text-xl leading-6 font-['DM_Sans'] text-[#2F3241] bg-[#E9ECFD] rounded-[15px] p-4 pr-6"
+                                class="text-[16px] 2xl:text-xl 2xl:leading-6 font-['DM_Sans'] text-[#2F3241] bg-[#E9ECFD] rounded-[15px] p-2 2xl:p-4 pr-6"
                             >
-                                <p class="flex items-center gap-4 text-[20px]">
+                                <p
+                                    class="flex items-center gap-4 font-sembold 2xl:text-[20px]"
+                                >
                                     Oct 25th 12:15pm
                                     <i class="fa-solid fa-video"></i>
                                 </p>
@@ -305,9 +309,13 @@
                             </div>
 
                             <div
-                                class="text-xl leading-6 font-['DM_Sans'] text-[#2F3241] bg-[#E9ECFD] rounded-[15px] p-4 pr-6 mt-5"
+                                class="text-[16px] 2xl:text-xl 2xl:leading-6 font-['DM_Sans'] text-[#2F3241] bg-[#E9ECFD] rounded-[15px] p-2 2xl:p-4 pr-6 mt-5"
                             >
-                                <p>Oct 25th 12:15pm</p>
+                                <p
+                                    class="flex items-center gap-4 font-sembold 2xl:text-[20px]"
+                                >
+                                    Oct 25th 12:15pm
+                                </p>
                                 <p class="text-[16px]">
                                     Follow up visit with Carrie S. VIRTUAL Dr.
                                     Anne Richardson
@@ -318,17 +326,20 @@
                                 >
                                     See Record
                                 </a>
-                                <p class="text-[16px]">
+                                <p
+                                    class="flex items-center justify-between text-[16px]"
+                                >
                                     Starts at 12:00 PM CST
+                                    <i class="fa-solid fa-chevron-right"></i>
                                 </p>
                                 <div class="mt-5 text-base">
                                     <button
-                                        class="h-10 bg-[#2A9A57] rounded-lg px-4 text-white"
+                                        class="h-8 2xl:h-10 bg-[#2A9A57] rounded-lg px-2 2xl:px-4 text-white"
                                     >
                                         Approve
                                     </button>
                                     <button
-                                        class="h-10 bg-[#D2474A] rounded-lg px-4 text-white ml-2"
+                                        class="h-8 2xl:h-10 bg-[#D2474A] rounded-lg px-2 2xl:px-4 text-white ml-2"
                                     >
                                         Decline
                                     </button>
@@ -340,10 +351,10 @@
                     <!-- Pulse section start -->
                     <div class="pulse">
                         <div
-                            class="bg-[#D8E5F0] rounded-tl-[15px] rounded-tr-[15px] px-5 py-3"
+                            class="bg-[#D8E5F0] rounded-tl-[15px] rounded-tr-[15px] px-3 2xl:px-5 py-1 2xl:py-3"
                         >
                             <h3
-                                class="text-[28px] leading-[34px] text-[#2F3241]"
+                                class="text-[18px] 2xl:text-[28px] 2xl:leading-[34px] text-[#2F3241]"
                             >
                                 Pulse
                             </h3>
@@ -506,13 +517,15 @@
                 <div class="row-3 mt-5 mr-4">
                     <!-- FinancialHealth section -->
                     <div
-                        class="bg-[#D8E5F0] rounded-tl-[15px] rounded-tr-[15px] px-5 py-3 flex justify-between items-center"
+                        class="bg-[#D8E5F0] rounded-tl-[15px] rounded-tr-[15px] px-3 2xl:px-5 py-1 2xl:py-3 flex justify-between items-center"
                     >
-                        <h3 class="text-[28px] leading-[34px] text-[#2F3241]">
+                        <h3
+                            class="text-[18px] 2xl:text-[28px] 2xl:leading-[34px] text-[#2F3241]"
+                        >
                             Financial Health
                         </h3>
                         <button
-                            class="btn bg-[#2A659A] w-fit h-10 text-[#fff] text-[16px] leading-[19px] hover:bg-[#103b61] rounded-[6px] px-4"
+                            class="btn bg-[#2A659A] w-fit h-8 2xl:h-10 text-[#fff] text-[16px] 2xl:leading-[19px] hover:bg-[#103b61] rounded-[6px] px-4"
                         >
                             Manage Refils
                         </button>
@@ -520,9 +533,9 @@
                     <div
                         class="table-container bg-white rounded-bl-[15px] rounded-br-[15px] p-5 text-[#2F3241] font-['DM_Sans']"
                     >
-                        <p class="text-[32px]">Patients</p>
+                        <p class="text-[22px] 2xl:text-[32px]">Patients</p>
 
-                        <table class="text-lg leading-9 overflow-auto w-full">
+                        <table class="text-[16px] 2xl:text-lg leading-1 2xl:leading-9 overflow-auto w-full">
                             <thead>
                                 <tr>
                                     <td>
