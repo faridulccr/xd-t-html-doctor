@@ -1,8 +1,16 @@
 .secretary-home {
    display: grid;
-   grid-template-columns: 412px 1fr;
+   grid-template-columns: auto 1fr;
    background-color: #f8f7fc;
    min-height: 100%;
+   padding-left: 0 !important;
+   padding-top: 0 !important;
+   height: calc(100vh - 73px);
+}
+
+.profile-details {
+   max-width: 412px;
+   height: calc(100vh - 73px);
 }
 
 .secretary-home .home-content ul li {
@@ -22,13 +30,6 @@
    background-color: #f8add0;
    border-radius: 10px 10px 0px 0px;
    color: #2f3241;
-}
-
-@media screen and (max-width: 1920px) {
-   .secretary-home .pulse-content {
-      grid-template-columns: 1fr;
-      gap: 50px;
-   }
 }
 
 .secretary-home .documents ul li {
@@ -141,20 +142,73 @@
    background-color: #f8add0;
 }
 
-@media screen and (max-width: 1920px) {
-   .secretary-home .billing-content {
-      grid-template-columns: 1fr;
-      gap: 50px;
-   }
-}
-
 .secretary-home .graph {
    position: relative;
 }
 
-
-
 .secretary-home .graph canvas {
    width: 500px !important;
    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 1920px) {
+   .profile-details {
+      height: calc(100vh - 66px);
+   }
+
+   .home-content {
+      height: 100%;
+      overflow: auto;
+      padding-bottom: 45px;
+   }
+
+   .home-content .admin-profile {
+      display: none;
+   }
+
+   .secretary-home .home-content ul li {
+      padding-bottom: 10px;
+      font-size: 16px;
+   }
+
+   .secretary-home .home-content ul li.active::after {
+      bottom: 0px;
+   }
+
+   #attendance-graph {
+      width: 100% !important;
+   }
+
+   .secretary-home .documents ul li {
+      padding: 5px;
+   }
+
+   .secretary-home .documents ul li div.doc-img {
+      gap: 10px;
+   }
+
+   .secretary-home .documents ul li span.doc {
+      width: 43px;
+      height: 43px;
+   }
+
+   .secretary-home .documents ul li span.doc i {
+      font-size: 37px;
+      bottom: -4px;
+   }
+
+   .secretary-home .documents ul li .hover-effect button {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+   }
+
+   .billing-content table tr td {
+      line-height: 1;
+   }
+
+   .billing-content ul li {
+      line-height: 1;
+   }
 }
