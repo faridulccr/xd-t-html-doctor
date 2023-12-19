@@ -302,12 +302,13 @@ body.dark .switch::before {
 }
 
 header.profile-header {
-    margin-left: 250px;
+    margin-left: auto;
     width: calc(100vw - 250px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
+    padding-left: 70px;
     background-color: #fff;
     border-bottom: 1px solid #E4E4EB;
     transform: 0.3s;
@@ -320,9 +321,10 @@ header.profile-header .title {
 }
 
 section.main-content {
-    margin-left: 250px;
-    width: calc(100vw - 250px);
+    margin-left: auto;
+    width: calc(100vw - 265px);
     transform: 0.3s;
+    border-right: 1px solid black;
 }
 
 /* .main-content .text {
@@ -334,7 +336,7 @@ section.main-content {
 
 .sidebar.close~.main-content,
 .sidebar.close~.profile-header {
-    margin-left: 90px;
+    margin-left: auto;
     width: calc(100vw - 90px);
     transform: 0.3s;
 }
@@ -350,6 +352,7 @@ section.main-content {
 
     header.profile-header {
         padding: 5px 30px;
+        padding-left: 70px;
     }
 
     header.profile-header p {

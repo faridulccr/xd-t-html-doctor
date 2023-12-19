@@ -19,7 +19,6 @@ body {
 
 @media screen and (max-width: 1920px) {
     body {
-        height: fit-content;
         height: 100vh;
         overflow: hidden;
     }
@@ -31,14 +30,99 @@ img {
 }
 
 .profile-details {
+    max-width: 360px;
     border-radius: 0 40px 40px 0;
     background-color: #fff;
 }
 
+.profile-details table {
+    width: 100%;
+    overflow: hidden;
+}
+
 .profile-details table tr td {
     padding: 0 30px 20px 0;
+    word-wrap: break-word;
 }
 
 .profile-details ul li {
     padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1920px) {
+    .profile-details {
+        max-width: 300px !important;
+        padding: 10px 10px 0 20px;
+        height: 100%;
+    }
+
+    .profile-details .user-content {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .user-content img {
+        margin-bottom: 0;
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-details h3 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .user-content h3 {
+        font-size: 1.3rem;
+        line-height: 1.3;
+    }
+
+    .user-content div.mt-7 {
+        margin-top: 10px;
+    }
+
+    .user-content p {
+        font-size: 0.9rem;
+        line-height: 1;
+
+    }
+
+    .user-content a {
+        font-size: 16px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .general-info table tbody {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+
+    .general-info table tbody tr td {
+        padding-right: 0;
+        padding-bottom: 5px;
+    }
+
+    .general-info table tbody tr td:first-child {
+        padding-right: 10px;
+    }
+
+    .active-employees ul,
+    .cared-for ul {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+
+    .active-employees ul li,
+    .cared-for ul li {
+        padding-bottom: 5px;
+    }
+
+    .link {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
 }

@@ -1,26 +1,16 @@
 .dashboard-home-container {
     display: grid;
-    grid-template-columns: 412px 1fr;
+    grid-template-columns: auto 1fr;
     background-color: #f8f7fc;
-    min-height: calc(100vh - 90px);
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    height: calc(100vh - 73px);
 }
 
 .dashboard-home-container .home-content .row-2 {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: auto 1fr;
     column-gap: 20px;
-}
-
-.dashboard-home-container .home-content .row-2 {
-    display: grid;
-    grid-template-columns: 450px 1fr;
-    column-gap: 20px;
-}
-
-@media screen and (max-width: 1920px) {
-    .dashboard-home-container .home-content .row-2 {
-        grid-template-columns: 1fr;
-    }
 }
 
 .dashboard-home-container .home-content .row-2 .pulse,
@@ -31,15 +21,14 @@
 }
 
 .dashboard-home-container .home-content .row-2 .pulse table {
-    min-width: 100%;
+    width: 100%;
 }
 
 .dashboard-home-container .home-content .row-2 .pulse table tbody tr {
     border: 0;
 }
 
-.dashboard-home-container .home-content .row-2 .pulse table tbody tr td {
-    padding-left: 0;
+.dashboard-home-container .home-content .row-2 .pulse table tr td {
     padding: 10px 10px 10px 0;
 }
 
@@ -52,7 +41,7 @@
     line-height: 22px;
     color: #2f3241;
     font-weight: normal;
-    padding-left: 0;
+    padding: 10px 10px 10px 0;
 }
 
 .dashboard-home-container .home-content .row-2 .pulse table thead tr th p {
@@ -128,21 +117,10 @@
     margin: 0 auto;
 }
 
-.dashboard-home-container .home-content .row-2 .geo-analytics .map-wrap .leaflet-container {
-    border-radius: 20px;
-    width: 98%;
-    height: 98%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 1;
-    animation: backInRight 1s 1.2s;
-    animation-fill-mode: forwards;
-}
+.geo-analytics .map-wrap iframe {
+    width: 700px;
+    height: 350px;
 
-.dashboard-home-container .home-content .row-2 .geo-analytics .map-wrap .leaflet-container .leaflet-control-attribution>a {
-    display: none;
 }
 
 .dashboard-home-container .home-content .graph-section {
@@ -155,23 +133,9 @@
     align-items: center;
 }
 
-@media screen and (max-width: 1920px) {
-    .dashboard-home-container .home-content .graph-section {
-        grid-template-columns: 1fr;
-        height: auto;
-    }
-}
-
 .dashboard-home-container .home-content .graph-section .total-payment {
     border-left: 1px solid #ddd8d8;
     padding: 65px 70px;
-}
-
-@media screen and (max-width: 1920px) {
-    .dashboard-home-container .home-content .graph-section .total-payment {
-        border-left: none;
-        border-top: 1px solid #ddd8d8;
-    }
 }
 
 .dashboard-home-container .home-content .graph-section .total-payment .recharts-layer .recharts-cartesian-axis-line {
@@ -196,4 +160,73 @@
 
     display: block;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 1920px) {
+
+    .admin-profile,
+    .home-content hr {
+        display: none !important;
+    }
+
+    .home-content {
+        padding-top: 0px;
+    }
+
+    .home-content .row-2 {
+        grid-template-columns: auto 1fr !important;
+        height: fit-content !important;
+    }
+
+    .row-2 .pulse,
+    .row-2 .geo-analytics {
+        margin-top: 10px !important;
+    }
+
+    .geo-analytics .map-wrap iframe {
+        width: 400px;
+        height: 150px;
+    }
+
+    .dashboard-home-container .home-content .row-2 .pulse table tr th,
+    .dashboard-home-container .home-content .row-2 .pulse table tr td {
+        padding: 5px 5px 5px 0;
+    }
+
+    .dashboard-home-container .home-content .row-2 .geo-analytics .select-group div {
+
+        border-radius: 10px;
+        padding: 5px 8px;
+    }
+
+    .dashboard-home-container .home-content .row-2 .geo-analytics .select-group div select {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+
+    .dashboard-home-container .home-content .row-2 .geo-analytics .map-wrap {
+        height: auto;
+    }
+
+    .dashboard-home-container .home-content .graph-section .graph-container canvas {
+        width: 360px !important;
+        height: 150px !important;
+    }
+
+    .dashboard-home-container .home-content .graph-section {
+        padding: 10px !important;
+    }
+
+    .dashboard-home-container .home-content .graph-section .total-payment {
+
+        padding: 5px 10px !important;
+    }
+
+    .dashboard-home-container .home-content .graph-section .treatment {
+        padding: 5px 10px !important;
+    }
+
+    .dashboard-home-container .home-content .row-2 .geo-analytics .analytics-btn button::after {
+        bottom: -10px;
+    }
 }
