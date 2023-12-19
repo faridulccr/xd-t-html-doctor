@@ -3,6 +3,14 @@
    grid-template-columns: 412px 1fr;
    background-color: #f8f7fc;
    min-height: 100%;
+   padding-top: 0 !important;
+   padding-left: 0 !important;
+}
+
+.profile-details {
+   max-width: 100% !important;
+   height: calc(100vh - 75px);
+   overflow-y: auto
 }
 
 .calender .calender-container div.fc-header-toolbar.fc-toolbar {
@@ -51,4 +59,37 @@
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+@media screen and (max-width: 1920px) {
+   .calender {
+      grid-template-columns: 312px 1fr;
+   }
+
+   .calender .content {
+      padding-bottom: 10px;
+   }
+
+   .calender .content .admin-profile,
+   .calender .content .admin-profile~hr {
+      display: none;
+   }
+
+   .profile-details {
+      height: calc(100vh - 66px);
+   }
+
+   .calender-container {
+      margin-top: 0px !important;
+      margin-bottom: 10px !important;
+   }
+
+   .calender .calender-container div.fc-header-toolbar.fc-toolbar {
+      padding: 10px;
+   }
+
+   #calendar {
+      height: 550px !important;
+      width: 100% !important;
+   }
 }
